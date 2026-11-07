@@ -111,6 +111,69 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
   margin-bottom: var(--space-xl);
 }
 
+.video-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs);
+  border: 0;
+  min-width: 0;
+}
+.video-gallery__legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+.video-gallery__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+.video-gallery__tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65em 1.25em;
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  background: var(--glass-bg);
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+}
+.video-gallery__tab:hover {
+  color: var(--white);
+  border-color: var(--accent-line);
+}
+.video-gallery__input:focus-visible + .video-gallery__tab {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+#video-category-real-estate:checked ~ .video-gallery__tab[for="video-category-real-estate"],
+#video-category-talking-heads:checked ~ .video-gallery__tab[for="video-category-talking-heads"] {
+  border-color: var(--accent-line);
+  background: var(--accent-soft);
+  color: var(--white);
+}
+.video-gallery__grid {
+  flex: 0 0 100%;
+  width: 100%;
+  margin-top: var(--space-xs);
+}
+.video-gallery__grid .card { display: none; }
+#video-category-real-estate:checked ~ .video-gallery__grid .card[data-category="real-estate"],
+#video-category-talking-heads:checked ~ .video-gallery__grid .card[data-category="talking-heads"] {
+  display: block;
+}
+
 /* fade-in on load */
 .fade-in {
   animation: fadeUp 0.9s cubic-bezier(.2,.7,.2,1) both;
