@@ -175,7 +175,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
 }
 #video-category-real-estate:checked ~ .video-gallery__grid .card--featured {
   display: grid;
-  grid-column: 1 / -1;
+  grid-column: span 2;
   grid-template-columns: minmax(0, 1.65fr) minmax(250px, 0.75fr);
   align-items: stretch;
 }
@@ -825,6 +825,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
   .grid--3 { grid-template-columns: 1fr; }
   .grid--6 { grid-template-columns: 1fr; }
   #video-category-real-estate:checked ~ .video-gallery__grid .card--featured {
+    grid-column: 1 / -1;
     grid-template-columns: minmax(0, 1fr);
   }
   .card--featured .card__body { padding: var(--space-md); }
