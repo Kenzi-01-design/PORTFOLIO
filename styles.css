@@ -91,7 +91,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
 
 .section { padding-block: var(--space-2xl); position: relative; }
 .section--portfolio-first {
-  padding-top: 0;
+  padding-top: 2px;
   padding-bottom: 80px;
 }
 .section--portfolio-first .section__subtitle { margin-bottom: 24px; }
@@ -790,7 +790,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
 
 /* Mobile nav + stacking */
 @media (max-width: 768px) {
-  .section.section--portfolio-first { padding-top: 0; }
+  .section.section--portfolio-first { padding-top: 2px; }
 
   .nav-burger {
     display: flex;
@@ -847,7 +847,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
     justify-self: center;
   }
   .section.section--portfolio-first {
-    padding-top: 0;
+    padding-top: 2px;
     padding-bottom: 48px;
   }
 }
