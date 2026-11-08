@@ -166,12 +166,18 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
 .video-gallery__grid {
   flex: 0 0 100%;
   width: 100%;
-  margin-top: var(--space-xs);
+  margin-top: var(--space-sm);
 }
 .video-gallery__grid .card { display: none; }
 #video-category-real-estate:checked ~ .video-gallery__grid .card[data-category="real-estate"],
 #video-category-talking-heads:checked ~ .video-gallery__grid .card[data-category="talking-heads"] {
   display: block;
+}
+#video-category-real-estate:checked ~ .video-gallery__grid .card--featured {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1.65fr) minmax(250px, 0.75fr);
+  align-items: stretch;
 }
 
 /* fade-in on load */
@@ -548,6 +554,14 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
 }
 .card__thumb--landscape { aspect-ratio: 16 / 9; }
 .card:hover .card__thumb { transform: scale(1.04); }
+.card--featured .card__thumb { height: 100%; }
+.card--featured .card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(24px, 4vw, 56px);
+}
+.card--featured .card__title { font-size: clamp(1.4rem, 2.4vw, 2rem); }
 
 .card__embed {
   position: absolute;
@@ -810,6 +824,10 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
 
   .grid--3 { grid-template-columns: 1fr; }
   .grid--6 { grid-template-columns: 1fr; }
+  #video-category-real-estate:checked ~ .video-gallery__grid .card--featured {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .card--featured .card__body { padding: var(--space-md); }
 
   .section { padding-block: var(--space-xl); }
   :root { --space-2xl: 90px; }
