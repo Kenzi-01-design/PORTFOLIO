@@ -546,6 +546,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
   overflow: hidden;
   transition: transform var(--transition);
 }
+.card__thumb--landscape { aspect-ratio: 16 / 9; }
 .card:hover .card__thumb { transform: scale(1.04); }
 
 .card__embed {
