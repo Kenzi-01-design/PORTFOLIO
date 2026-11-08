@@ -183,7 +183,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
   display: none;
 }
 .video-gallery__grid--fullhd {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
 }
 .video-gallery__grid--shorts {
   grid-template-columns: repeat(4, minmax(0, 1fr));
