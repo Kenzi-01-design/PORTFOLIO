@@ -554,7 +554,12 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
 }
 .card__thumb--landscape { aspect-ratio: 16 / 9; }
 .card:hover .card__thumb { transform: scale(1.04); }
-.card--featured .card__thumb { height: 100%; }
+.card--featured .card__thumb {
+  width: min(100%, 560px);
+  aspect-ratio: 16 / 9;
+  justify-self: center;
+  align-self: center;
+}
 .card--featured .card__body {
   display: flex;
   flex-direction: column;
