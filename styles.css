@@ -91,7 +91,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
 
 .section { padding-block: var(--space-2xl); position: relative; }
 .section--portfolio-first {
-  padding-block: 80px;
+  padding-top: 0;
+  padding-bottom: 80px;
 }
 .section--portfolio-first .section__subtitle { margin-bottom: 24px; }
 .section__eyebrow {
@@ -789,6 +790,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
 
 /* Mobile nav + stacking */
 @media (max-width: 768px) {
+  .section.section--portfolio-first { padding-top: 0; }
+
   .nav-burger {
     display: flex;
     flex-direction: column;
@@ -843,7 +846,10 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
     width: min(100%, 320px);
     justify-self: center;
   }
-  .section.section--portfolio-first { padding-block: 48px; }
+  .section.section--portfolio-first {
+    padding-top: 0;
+    padding-bottom: 48px;
+  }
 }
 
 @media (max-width: 480px) {
